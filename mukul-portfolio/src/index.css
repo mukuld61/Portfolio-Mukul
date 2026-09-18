@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --ink: #0e1526;
+  --ink-2: #131b30;
+  --ink-3: #1a2440;
+  --paper: #edeae0;
+  --paper-dim: #a9a89e;
+  --brass: #c99b5c;
+  --brass-soft: #8c6a3c;
+  --line: rgba(237, 234, 224, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Faint drafting-grid texture used behind the hero and section dividers */
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+::selection {
+  background: var(--brass);
+  color: var(--ink);
+}
+
+.hairline {
+  border-color: var(--line);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
